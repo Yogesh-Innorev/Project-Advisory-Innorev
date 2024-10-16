@@ -109,6 +109,41 @@ class Welcome extends CI_Controller {
         $this->load->view('miscellaneous/term_condition');
         $this->load->view('includes/footer');
     }
-    
+    public function Project_Engineering()
+    {
+        $this->load->view('includes/header');
+        $this->load->view('our_services/project_engineering');
+        $this->load->view('includes/footer');
+    }
+    public function Project_Techno_Financial_Due_diligence()
+    {
+        $this->load->view('includes/header');
+        $this->load->view('our_services/project_techno_financial_due_diligence');
+        $this->load->view('includes/footer');
+    }
+    public function Government_Incentives()
+    {
+        $this->load->view('includes/header');
+        $this->load->view('our_services/government_incentives');
+        $this->load->view('includes/footer');
+    }
+    public function Ease_of_Doing_Business()
+    {
+        $this->load->view('includes/header');
+        $this->load->view('our_services/ease_of_boing_business');
+        $this->load->view('includes/footer');
+    }
+    public function Project_Approvals()
+    {
+        $this->load->view('includes/header');
+        $this->load->view('our_services/project_approvals');
+        $this->load->view('includes/footer');
+    }
+    public function Project_Application_Flow()
+    {
+        $this->load->view('includes/header');
+        $this->load->view('our_services/project_application_flow');
+        $this->load->view('includes/footer');
+    }
 
 }

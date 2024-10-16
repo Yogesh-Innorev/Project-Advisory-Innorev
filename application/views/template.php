@@ -47,10 +47,10 @@
           background-color: #015fc9 !important;
       }
       #signUpForm {
-          max-width: 500px;
+          max-width: 1160px;
           background-color: #ffffff;
           margin: 40px auto;
-          padding: 40px;
+          padding: 20px;
           box-shadow: 0px 6px 18px rgb(0 0 0 / 9%);
           border-radius: 12px;
       }
@@ -144,23 +144,32 @@
           border: 1px solid #0468BF !important;
           color: #ffffff;
           border: none;
-          padding: 13px 30px;
+          padding: 3px 30px;
           font-size: 1em;
           cursor: pointer;
           border-radius: 5px;
-          flex: 1;
-          margin-top: 5px;
+/*          flex: 1;*/
+/*          width: 200px;*/
+          display: block;
+          margin: 5px auto;
       }
       #signUpForm .form-footer button:hover {
           opacity: 0.8;
       }
       #signUpForm .form-footer #prevBtn {
-          background-color: #fff;
-          color: #009688;
+          background-color: #0468BF;
+    border: 1px solid #0468BF !important;
+    color: #ffffff;
+    border: none;
+    padding: 3px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    /* flex: 1; */
+    /* width: 200px; */
+    display: block;
+    margin: 5px auto;
       }
-
-
-      
 
        #sector {
             padding: 8px;
@@ -329,18 +338,15 @@
           <div class="step">
             <p class="text-center mb-4">Give us some information to get you started on the bank's dashboard</p>
             <div class="row">
-              <div class="col">
+              <div class="col-3">
                 <label for="sector"><strong>Name</strong></label> 
                 <input type="text" class="form-control" name="name" placeholder="Full name"  required>
               </div>
-              <div class="col">
+              <div class="col-3">
                 <label for="sector"><strong>Company Name</strong></label>
                 <input type="text" class="form-control" name="c_name" placeholder="Company name"  required>
               </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col">
+              <div class="col-3">
                 <label for="sector"><strong>Nature of Business</strong></label>
                 <select id="sector" name="nature_of_business" class="js-example-basic-single" style="width: 100%;" required>
                     <option value="">Select Nature of Business</option>
@@ -349,7 +355,7 @@
                     <?php endforeach; ?>
                 </select>
               </div>
-              <div class="col">
+              <div class="col-3">
                 <label for="sector"><strong>Sector</strong></label>
                 <select id="sector" name="sector" class="js-example-basic-single" style="width: 100%;" required>
                     <option value="">Select Sector</option>
@@ -357,13 +363,14 @@
                     <option value="<?php echo htmlspecialchars($sector['id']); ?>"><?php echo htmlspecialchars($sector['name']); ?></option>
                     <?php endforeach; ?>
                 </select>
-              </div>              
+              </div> 
             </div>
+            
           </div> 
           <!-- step two -->
           <div class="step">
             <div class="row">
-              <div class="col">
+              <div class="col-4">
                 <label for="estimatedTurnover"><strong>Estimated Turnover</strong></label>
                 <select id="sector" name="estimatedTurnover" class="js-example-basic-single" style="width: 100%;" required>
                     <option value="">Select Estimated Turnover</option>
@@ -372,9 +379,7 @@
                     <?php endforeach; ?>
                 </select>
               </div>
-            </div>
-            <div class="row">
-              <div class="col">
+              <div class="col-4">
                 <label for="fundingPurpose"><strong>Funding Purpose</strong></label>
                 <select id="sector" name="fundingPurpose" class="js-example-basic-single" style="width: 100%;" required>
                     <option value="">Select Funding Purpose</option>
@@ -383,9 +388,7 @@
                     <?php endforeach; ?>
                 </select>
               </div>
-            </div>
-            <div class="row">
-              <div class="col">
+              <div class="col-4">
                 <label for="loanType"><strong>Loan Type Required</strong></label>
                 <select id="sector" name="loanType" class="js-example-basic-single" style="width: 100%;" required>
                     <option value="">Select Loan Type</option>
@@ -399,16 +402,17 @@
           <!-- step three -->
           <div class="step">
             <div class="row">
-              <div class="col">
+              <div class="col-6">
                 <label for="estimatedTurnover"><strong>Email</strong></label>
                 <input type="text" placeholder="Email"  name="email" required> 
               </div>
-            </div>
-            <div class="row">
-              <div class="col">
+              <div class="col-6">
                 <label for="estimatedTurnover"><strong>Phone Number</strong></label>
                 <input type="text" placeholder="Phone Number"  name="pnumber" required> 
               </div>
+            </div>
+            <div class="row">
+              
             </div>
             <!-- <div class="col-lg-12" style="margin-top:10px">
                 <label for="estimatedTurnover"><strong>Do You Need Advisory in Project Funding to help you choose right bank and product for you with competitive pricing?</strong></label>

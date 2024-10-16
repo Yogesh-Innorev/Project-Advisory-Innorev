@@ -76,6 +76,12 @@ $route['Project-Funding'] = 'admin/header/page';
 $route['Our-Services'] = 'Welcome/services';
 $route['About-Us'] = 'Welcome/aboutus';
 $route['Contact-Us'] = 'Welcome/contact_us';
+$route['Project-Engineering'] = 'Welcome/Project_Engineering';
+$route['Project-Techno-Financial-Due-Diligence'] = 'Welcome/Project_Techno_Financial_Due_diligence';
+$route['Government-Incentives'] = 'Welcome/Government_Incentives';
+$route['Ease-of-Doing-Business'] = 'Welcome/Ease_of_Doing_Business';
+$route['Project-Approvals'] = 'Welcome/Project_Approvals';
+$route['Project-Application-Flow'] = 'Welcome/Project_Application_Flow';
 
 // manage blogs
 $route['blog'] = 'admin/blog/index';

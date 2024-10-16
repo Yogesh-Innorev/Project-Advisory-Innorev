@@ -6,7 +6,7 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
-    <title>R.K Advisory</title>
+    <!-- <title>R.K Advisory</title> -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -25,12 +25,6 @@
     <link href="<?php echo base_url(); ?>assets/navbar/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/navbar/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <!-- <link href="<?php echo base_url(); ?>assets/navbar/css/bootstrap.min.css" rel="stylesheet"> -->
-
-    <!-- Template Stylesheet -->
-    <!-- <link href="<?php echo base_url(); ?>assets/navbar/css/style.css" rel="stylesheet"> -->
     <style>
 
 .nav-bar {
@@ -154,13 +148,13 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
                             <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Project Engineering Advisory</a>
-                                <a href="gallery.html" class="dropdown-item">Project Techno-Financial due diligence </a>
+                                <a href="<?php echo base_url(); ?>Project-Engineering" class="dropdown-item">Project Engineering Advisory</a>
+                                <a href="<?php echo base_url(); ?>Project-Techno-Financial-Due-Diligence" class="dropdown-item">Project Techno-Financial due diligence </a>
                                 <a href="<?php echo base_url(); ?>Project-Funding" class="dropdown-item">Project Funding (Dasboard)</a>
-                                <a href="package.html" class="dropdown-item">Govt. Incentives</a>
-                                <a href="team.html" class="dropdown-item">Ease-of-doing business</a>
-                                <a href="testimonial.html" class="dropdown-item">Project Approvals</a>
-                                <a href="404.html" class="dropdown-item">Project Application flow</a>
+                                <a href="<?php echo base_url(); ?>Government-Incentives" class="dropdown-item">Govt. Incentives</a>
+                                <a href="<?php echo base_url(); ?>Ease-of-Doing-Business" class="dropdown-item">Ease-of-doing business</a>
+                                <a href="<?php echo base_url(); ?>Project-Approvals" class="dropdown-item">Project Approvals</a>
+                                <a href="<?php echo base_url(); ?>Project-Application-Flow" class="dropdown-item">Project Application flow</a>
                             </div>
                         </div>
                         <!-- <a href="<?php echo base_url() ?>Our-Services" class="nav-item nav-link">Service</a> -->

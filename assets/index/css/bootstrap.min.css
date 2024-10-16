@@ -416,11 +416,13 @@ progress {
   font-weight: 700;
   line-height: 1.2;
 }
+/*changes by yogesh singh on 16-10-2024 starts font-size from 5rem to 3rem*/
 @media (min-width: 1200px) {
   .display-1 {
     font-size: 3rem;
   }
 }
+/*changes by yogesh singh on 16-10-2024 end*/
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 700;

@@ -127,10 +127,13 @@
                     <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div class="about-item-content bg-white rounded p-5 h-100">
                             <h4 class="text-primary">About Our Company</h4>
-                            <h1 class="display-4 mb-4">High Range of Exploring Protection</h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt debitis sint tempora. Corporis consequatur illo blanditiis voluptates aperiam quos aliquam totam aliquid rem explicabo,
-                            </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium recusandae eligendi modi hic
+                            <h1 class="display-4 mb-4">AT R.K Advisory</h1>
+                            <p>we are committed to guiding businesses through the complexities
+                                of project planning, funding, and approvals. With years of experience in
+                                engineering, financial analysis, and government incentives, we provide clients
+                                with tailored solutions to ensure their projects' success. Whether you need
+                                expert advice, financial due diligence, or assistance with government approvals,
+                                RK Advisory is your trusted partner.
                             </p>
                             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>We can save your money.</p>
                             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Production or trading of good</p>
@@ -195,7 +198,7 @@
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Services</h4>
                     <h1 class="display-4 mb-4">We Provide Best Services</h1>
-                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+                    <p class="mb-0">We are committed to guiding businesses through the complexities of project planning, funding, and approvals. With years of experience in engineering, financial analysis, and government incentives.
                     </p>
                 </div>
                 <div class="row g-4 justify-content-center">
@@ -209,9 +212,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Project Engineering Advisory</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Project-Engineering" class="d-inline-block h4 mb-4">Project Engineering Advisory</a>
+                                    <p class="mb-4">From concept to execution, we provide engineering guidance to ensure that your project is structurally sound and meets all technical specifications.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Engineering">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +230,7 @@
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
                                     <a href="<?php echo base_url(); ?>Project-Funding" class="d-inline-block h4 mb-4">Project Funding (Dasboard)</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
+                                    <p class="mb-4">Compare loan products across banks to find the best fit for your project. Our team offers advisory support to guide you through the process.</p>
                                     <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Funding">Read More</a>
                                 </div>
                             </div>
@@ -243,9 +246,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Ease-of-doing business</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Ease-of-Doing-Business" class="d-inline-block h4 mb-4">Ease-of-doing business</a>
+                                    <p class="mb-4">We simplify business setup, ensuring your projects move forward smoothly by cutting through red tape and bureaucracy.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Ease-of-Doing-Business">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -260,9 +263,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Project Techno-Financial due diligence </a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Project-Techno-Financial-Due-Diligence" class="d-inline-block h4 mb-4">Project Techno-Financial due diligence </a>
+                                    <p class="mb-4">before you invest, we ensure your project’s financial and technical aspects are thoroughly vetted to safeguard your resources.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Techno-Financial-Due-Diligence">Read More</a>
                                 </div>
                             </div>
                         </div>

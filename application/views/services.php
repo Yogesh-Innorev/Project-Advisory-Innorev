@@ -54,7 +54,7 @@
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Services</h4>
                     <h1 class="display-4 mb-4">We Provide Best Services</h1>
-                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+                    <p class="mb-0">We are committed to guiding businesses through the complexities of project planning, funding, and approvals. With years of experience in engineering, financial analysis, and government incentives.
                     </p>
                 </div>
                 <div class="row g-4 justify-content-center">
@@ -68,9 +68,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Project Engineering Advisory</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Project-Engineering" class="d-inline-block h4 mb-4">Project Engineering Advisory</a>
+                                    <p class="mb-4">From concept to execution, we provide engineering guidance to ensure that your project is structurally sound and meets all technical specifications.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Engineering">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
                                     <a href="#" class="d-inline-block h4 mb-4">Project Funding (Dasboard)</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
+                                    <p class="mb-4">Compare loan products across banks to find the best fit for your project. Our team offers advisory support to guide you through the process.</p>
                                     <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Funding">Read More</a>
                                 </div>
                             </div>
@@ -103,9 +103,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Ease-of-doing business</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Ease-of-Doing-Business" class="d-inline-block h4 mb-4">Ease-of-doing business</a>
+                                    <p class="mb-4">We simplify business setup, ensuring your projects move forward smoothly by cutting through red tape and bureaucracy</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Ease-of-Doing-Business">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -120,9 +120,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Project Techno-Financial due diligence</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Project-Techno-Financial-Due-Diligence" class="d-inline-block h4 mb-4">Project Techno-Financial due diligence</a>
+                                    <p class="mb-4">before you invest, we ensure your project’s financial and technical aspects are thoroughly vetted to safeguard your resources.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Techno-Financial-Due-Diligence">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -137,9 +137,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Govt. Incentives</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Government-Incentives" class="d-inline-block h4 mb-4">Govt. Incentives</a>
+                                    <p class="mb-4">Maximize the benefits available through various government schemes and incentives with our detailed advisory services.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Government-Incentives">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -154,9 +154,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Project Approvals</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Project-Approvals" class="d-inline-block h4 mb-4">Project Approvals</a>
+                                    <p class="mb-4">Get expert help in obtaining the necessary project approvals quickly and efficiently.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Approvals">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -171,9 +171,9 @@
                             </div>
                             <div class="service-content p-4">
                                 <div class="service-content-inner">
-                                    <a href="#" class="d-inline-block h4 mb-4">Project Application flow</a>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum!</p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Read More</a>
+                                    <a href="<?php echo base_url(); ?>Project-Application-Flow" class="d-inline-block h4 mb-4">Project Application flow</a>
+                                    <p class="mb-4">We streamline the application process from start to finish, ensuring no delays in getting your project moving.</p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="<?php echo base_url(); ?>Project-Application-Flow">Read More</a>
                                 </div>
                             </div>
                         </div>
