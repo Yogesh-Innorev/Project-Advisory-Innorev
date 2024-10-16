@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Inter:slnt,wght@-10..0,100..900&amp;display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="../../use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/index/lib/animate/animate.min.css"/>
+    <link href="<?php echo base_url() ?>assets/index/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/index/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="<?php echo base_url() ?>assets/index/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="<?php echo base_url() ?>assets/index/css/style.css" rel="stylesheet">
+<style>
+
+/*   table*/
+body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+/*  overflow-x: auto;*/
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #2c54ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+/*    text-transform: uppercase;*/
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 8%;
+  }
+  .col-2 {
+    flex-basis: 8%;
+  }
+  .col-3 {
+    flex-basis: 8%;
+  }
+  .col-4 {
+    flex-basis: 9%;
+  }
+  .col-5 {
+    flex-basis: 9%;
+  }
+  .col-6 {
+    flex-basis: 8%;
+  }
+  .col-7 {
+    flex-basis: 5%;
+  }
+  .col-8 {
+    flex-basis: 9%;
+  }
+  .col-9 {
+    flex-basis: 8%;
+  }
+  .col-10 {
+    flex-basis: 8%;
+  }
+  .col-11 {
+    flex-basis: 8%;
+  }
+  .col-12 {
+    flex-basis: 8%;
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+      
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+.responsive-table{
+    margin-top: 20px;
+    margin-left: -31px;
+  }
+    </style>
+</head>
+<body>
+
+<?php $data = $this->db->order_by('id','asc')->get_where('product_groups',['loan_type_id'=>2])->row(); ?>
+
+
+<div class="container">
+  <!-- <h2>Responsive Tables Using LI <small>Triggers on 767px</small></h2> -->
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Product</div>
+      <div class="col col-2">Bank Name</div>
+      <div class="col col-3">Eligibility</div>
+      <div class="col col-4">Primary Security</div>
+      <div class="col col-5">Collectural Security</div>
+      <div class="col col-6">Guarantee</div>
+      <div class="col col-7">Title</div>
+      <div class="col col-8">Quantum of loan</div>
+      <div class="col col-9">Borrower Margin</div>
+      <div class="col col-10">Repayment Period</div>
+      <div class="col col-11">Roi Pricing</div>
+      <div class="col col-12">Processing Fees</div>
+    </li>
+        <?php $loan_name = $this->db->get_where('kind_of_loan_type',['id'=>$loanType])->row(); ?>
+      <h1>Products for Loan Type: <?php echo htmlspecialchars($loan_name->loanType_name); ?></h1>
+
+    <?php foreach ($products as $product): ?>
+    <li class="table-row">
+        <?php $p_name = $this->db->get_where('products',['id'=>$product['product_id']])->row(); ?>
+      <div class="col col-1" data-label="Job Id"><?php echo $p_name->product_name; ?></div>
+
+      <?php $b_name = $this->db->get_where('banks',['id'=>$product['bank_id']])->row(); ?>
+      <div class="col col-2" data-label="Customer Name"><?php echo htmlspecialchars($b_name->bank_name); ?></div>
+
+      <?php $e_name = $this->db->get_where('eligibility',['id'=>$product['eligibility_id']])->row(); ?>
+      <div class="col col-3" data-label="Amount"><?php echo htmlspecialchars($e_name->eligibility); ?></div>
+
+      <?php $p_security = $this->db->get_where('primary_security',['id'=>$product['primary_security']])->row(); ?>
+      <div class="col col-4" data-label="Payment Status"><?php echo htmlspecialchars($p_security->primary_security); ?></div>
+
+      <?php $c_security = $this->db->get_where('colletural_security',['id'=>$product['colletural_security']])->row(); ?>
+      <div class="col col-1" data-label="Job Id"><?php echo htmlspecialchars($c_security->collectural_security); ?></div>
+
+      <?php $gurantees = $this->db->get_where('gurantees',['id'=>$product['gurantees']])->row(); ?>
+      <div class="col col-2" data-label="Customer Name"><?php echo htmlspecialchars($gurantees->gurantees); ?></div>
+
+      <?php $terms_conditions = $this->db->get_where('terms_conditions',['id'=>$product['title']])->row(); ?>
+      <div class="col col-3" data-label="Amount"><?php echo htmlspecialchars($terms_conditions->title); ?></div>
+      <div class="col col-4" data-label="Payment Status"><?php echo htmlspecialchars($product['quantum_of_loan']); ?></div>
+      <div class="col col-1" data-label="Job Id"><?php echo htmlspecialchars($product['borrower_margin']); ?></div>
+      <div class="col col-2" data-label="Customer Name"><?php echo htmlspecialchars($product['repayment_period']); ?></div>
+      <div class="col col-3" data-label="Amount"><?php echo htmlspecialchars($product['roi_pricing']); ?></div>
+      <div class="col col-4" data-label="Payment Status"><?php echo htmlspecialchars($product['processing_fees']); ?></div>
+    </li>
+    <?php endforeach; ?>
+  </ul>
+</div>
+
+    <!-- Include jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+

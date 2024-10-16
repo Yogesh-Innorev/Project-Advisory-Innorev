@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #304767; /* Background color for the entire page */
+        }
+        /* Background gradient */
+        #grad1 {
+            /* background-color: ; */
+            background-color: #304767;
+            /* background-image: url('/rkassociate/assets/office_1.jpg'); */
+            /* background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+            padding: 20px; */
+        }
+
+        /* Form container */
+        .form-ca {
+        background-color: #ffffff; /* Background color of the success message */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth effect */
+        color: #333333; /* Text color */
+        text-align: center; /* Align text to center */
+        max-width: 500px; /* Adjust max-width as per your design */
+        margin: 0 auto; /* Center align the success message */
+    }
+
+    .form-ca h2 {
+        color: #673AB7; /* Title color */
+        font-size: 28px; /* Title font size */
+        font-weight: bold; /* Title font weight */
+        margin-bottom: 10px; /* Optional: Adjust margin */
+    }
+
+    .form-ca h5 {
+        font-size: 18px; /* Text font size */
+        font-weight: normal; /* Text font weight */
+        margin-top: 10px; /* Optional: Adjust margin */
+    }
+
+    .form-ca .success-image {
+        width: 100px; /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+        /* Form styles */
+        #msform {
+            text-align: center;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #msform fieldset .form-card {
+            background: white;
+            border: 0 none;
+            border-radius: 0px;
+            box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+            padding: 20px 40px 30px 40px;
+            box-sizing: border-box;
+            width: 94%;
+            margin: 0 3% 20px 3%;
+            position: relative;
+        }
+
+        #msform fieldset {
+            background: white;
+            border: 0 none;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        /* Hide all except first fieldset */
+        #msform fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+        #msform fieldset .form-card {
+            text-align: left;
+            color: #9E9E9E;
+        }
+
+        #msform input, #msform textarea {
+            padding: 0px 8px 4px 8px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 25px;
+            margin-top: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+            color: #2C3E50;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        #msform input:focus, #msform textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: none;
+            font-weight: bold;
+            border-bottom: 2px solid skyblue;
+            outline-width: 0;
+        }
+
+        /* Blue Buttons */
+        #msform .action-button {
+            width: 100px;
+            background: skyblue;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 0px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button:hover, #msform .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
+        }
+
+        /* Previous Buttons */
+        #msform .action-button-previous {
+            width: 100px;
+            background: #616161;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 0px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+        }
+
+        /* Dropdown List Exp Date */
+        select.list-dt {
+            border: none;
+            outline: 0;
+            border-bottom: 1px solid #ccc;
+            padding: 2px 5px 3px 5px;
+            margin: 2px;
+        }
+
+        select.list-dt:focus {
+            border-bottom: 2px solid skyblue;
+        }
+
+        /* The background card */
+        .card {
+            z-index: 0;
+            border: none;
+            border-radius: 0.5rem;
+            position: relative;
+            padding: 10px; /* Adjust padding as needed */
+            margin: 10px auto; /* Adjust margin as needed */
+        }
+
+        /* FieldSet headings */
+        .fs-title {
+            font-size: 25px;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Progressbar */
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            color: lightgrey;
+        }
+
+        #progressbar .active {
+            color: #000000;
+        }
+
+        #progressbar li {
+            list-style-type: none;
+            font-size: 12px;
+            width: 25%;
+            float: left;
+            position: relative;
+        }
+
+        /* Icons in the ProgressBar */
+        #progressbar #account:before {
+            font-family: FontAwesome;
+            content: "\f023";
+        }
+
+        #progressbar #personal:before {
+            font-family: FontAwesome;
+            content: "\f007";
+        }
+
+        #progressbar #payment:before {
+            font-family: FontAwesome;
+            content: "\f09d";
+        }
+
+        #progressbar #confirm:before {
+            font-family: FontAwesome;
+            content: "\f00c";
+        }
+
+        /* ProgressBar before any progress */
+        #progressbar li:before {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            display: block;
+            font-size: 18px;
+            color: #ffffff;
+            background: lightgray;
+            border-radius: 50%;
+            margin: 0 auto 10px auto;
+            padding: 2px;
+        }
+
+        /* ProgressBar connectors */
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: lightgray;
+            position: absolute;
+            left: 0;
+            top: 25px;
+            z-index: -1;
+        }
+
+        /* Color number of the step and the connector before it */
+        #progressbar li.active:before, #progressbar li.active:after {
+            background: skyblue;
+        }
+
+        /* Imaged Radio Buttons */
+        .radio-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .radio {
+            display: inline-block;
+            width: 204px; /* Adjust width as needed */
+            height: 104px; /* Adjust height as needed */
+            border-radius: 0;
+            background: lightblue;
+            box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 8px 2px;
+        }
+
+        .radio:hover {
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .radio.selected {
+            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Fit image in bootstrap div */
+        .fit-image {
+            width: 100%;
+            object-fit: cover;
+        }
+        #sector {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #2C3E50;
+    background-color: #fff;
+    box-sizing: border-box;
+    }
+    .form-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .input-box input[type="text"] {
+    padding: 8px; /* Adjust padding to your preference */
+    font-size: 14px; /* Adjust font size to your preference */
+    }
+    .input-box label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold; /* Make the label text bold */
+        color: #333; /* Dark black color */
+    }
+
+    .input-box input[type="text"], .input-box select {
+    width: 100%;
+    padding: 8px; /* Adjusted padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px; /* Adjusted font size */
+    background-color: #f8f8f8;
+    color: #333; /* Match input text color to label */
+}
+
+    /* Focus style for form fields */
+    .input-box input[type="text"]:focus, .input-box select:focus {
+        border: 2px solid skyblue;
+        background-color: #fff;
+        outline: none;
+    }
+
+    /* Placeholder style for form fields */
+    .input-box input[type="text"]::placeholder {
+        color: #bbb;
+        font-style: italic;
+    }
+
+    /* Button styles */
+    .action-button {
+        width: 150px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .action-button:hover {
+        background-color: #45a049;
+    }
+
+    .action-button-previous {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+
+    .action-button-previous:hover {
+        background-color: #ddd;
+    }
+    
+    h1{
+        color: darkblue;
+        /* background-color:darkblue; */
+        font-size: 40px;
+        /* display: inline; */
+        /* text-shadow: 2px 2px; */
+        
+    }
+    h3{
+        color: blue;
+        font-size:12px;
+        /* background-color:blue; */
+    }
+    .input-row {
+    display: flex;
+    justify-content: space-between; /* Adjust alignment as needed */
+    margin-bottom: 15px;
+}
+
+.input-box {
+    flex: 1; /* This will make each input-box take up equal space */
+    margin-right: 10px; /* Adjust spacing between columns */
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-box input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-box input[type="text"]:focus {
+    border: 2px solid skyblue;
+    outline: none;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-card {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    flex: 1;
+    margin-bottom: 15px; /* Adjust spacing between input boxes */
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-box select,
+.input-box input[type="text"] {
+    width: calc(100% - 20px); /* Adjust input width with margin */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-box select:focus,
+.input-box input[type="text"]:focus {
+    border: 2px solid skyblue;
+    outline: none;
+}
+
+.action-button-previous,
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.action-button-previous:hover,
+.action-button:hover {
+    background-color: #0056b3;
+}
+.card {
+            background-color: white; /* Background color for the card */
+            padding: 20px; /* Adjust padding as needed */
+            margin: 20px auto; /* Adjust margin as needed */
+            width: 90%; /* Adjust width as needed */
+            max-width: 900px; /* Maximum width if necessary */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for depth */
+            height: auto; /* Adjust height as needed */
+            padding: 10px; /* Adjust padding as needed */
+            margin: 10px auto; /* Adjust margin as needed */
+            width: 80%; /* Adjust the width as needed */
+            /* max-width: 600px; Set a maximum width if needed   */
+            /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); Reduce shadow size  */
+        }
+
+        .container-fluid {
+            /* padding: 0 20px; Adjust padding as needed */
+        }
+        h2{
+            color: darkblue;
+            font-size: 25px;
+        }
+        p{
+            color: blue;
+        }
+        nav {
+            background: #002fff;
+            color: white;
+            padding: 15px 0;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .card-wrapper {
+            margin-top: 60px; /* Space after the navbar */
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            width: 100% !important;
+        }
+
+        footer p {
+            margin: 0;
+            color:white;
+        }
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#dashboard">Dashboard Access</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+<?php echo validation_errors(); ?>
+<div class="container-fluid">
+        <div class="row justify-content-center mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+            <div class="card-wrapper">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <center><h2><strong>Welcome</strong></h2><br>
+                    <p>Give us some information to get you started on the bank's dashboard</p></center>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                        <form id="msform" action="<?php echo site_url('header/save_form'); ?>" method="post">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Step 1</strong></li>
+                                    <li id="personal"><strong>Step 2</strong></li>
+                                    <li id="payment"><strong>Step 3</strong></li>
+                                    <li id="confirm"><strong>Finish</strong></li>
+                                </ul>
+                                <!-- fieldsets -->
+                                <fieldset>
+                                <div class="form-card">
+                                <div class="input-row">
+                                <!-- <h2 class="fs-title">Step 3</h2> -->
+                                <div class="input-box">
+                                    <label for="name"><strong>Name</strong></label>
+                                    <input type="text" id="name" name="name" placeholder="" required required>
+                                </div>
+                                <div class="input-box">
+                                        <label for="c_name"><strong>Company Name</strong></label>
+                                        <input type="text" id="c_name" name="c_name" placeholder="" required>
+                                        
+                                    </div>
+                                    </div>
+                                    <div class="input-row">
+                                    <div class="input-box">
+                                    <label for="nature_of_business"><strong>Nature of Business</strong></label>
+                                    <select id="nature_of_business" name="nature_of_business" class="js-example-basic-single" style="width: 100%;">
+                                        <option value="">Select Nature of Business</option>
+                                        <?php foreach ($business_natures as $nature): ?>
+                                            <option value="<?php echo htmlspecialchars($nature['id']); ?>"><?php echo htmlspecialchars($nature['name']); ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    </div>
+                                    <div class="input-box">
+                                    <label for="sector"><strong>Sector</strong></label>
+                                    <select id="sector" name="sector" class="js-example-basic-single" style="width: 100%;">
+                                        <option value="">Select Sector</option>
+                                        <?php foreach ($sectors as $sector): ?>
+                                            <option value="<?php echo htmlspecialchars($sector['id']); ?>"><?php echo htmlspecialchars($sector['name']); ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                    <input type="button" name="next" class="next action-button" value="Next Step"/>
+                                </fieldset>
+
+                                <fieldset class="step2">
+                                    <br><div class="form-card">
+                                        <div class="input-row">
+                                            <div class="input-box">
+                                                <label for="estimatedTurnover"><strong>Estimated Turnover</strong></label>
+                                                <select id="estimatedTurnover" name="estimatedTurnover" class="js-example-basic-single" style="width: 100%;">
+                                                    <option value="">Select Estimated Turnover</option>
+                                                    <?php foreach ($turnover_options as $turnover): ?>
+                                                        <option value="<?php echo htmlspecialchars($turnover['id']); ?>"><?php echo htmlspecialchars($turnover['name']); ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                            <div class="input-box">
+                                                <label for="fundingPurpose"><strong>Funding Purpose</strong></label>
+                                                <select id="fundingPurpose" name="fundingPurpose" class="js-example-basic-single" style="width: 100%;">
+                                                    <option value="">Select Funding Purpose</option>
+                                                    <?php foreach ($funding_purposes as $purpose): ?>
+                                                        <option value="<?php echo htmlspecialchars($purpose['id']); ?>"><?php echo htmlspecialchars($purpose['name']); ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                            </div>
+                                            <div class="input-box">
+                                                <label for="loanType"><strong>Loan Type Required</strong></label>
+                                                <select id="loanType" name="loanType" class="js-example-basic-single" style="width: 100%;">
+                                                    <option value="">Select Loan Type</option>
+                                                    <?php foreach ($loan_types as $loan_type): ?>
+                                                        <option value="<?php echo htmlspecialchars($loan_type['id']); ?>"><?php echo htmlspecialchars($loan_type['loanType_name']); ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous">
+                                    <input type="button" name="next" class="next action-button" value="Next Step">
+                                </fieldset>
+
+
+<fieldset>
+                                <br><div class="form-card">
+                                <div class="input-row">
+                                <!-- <h2 class="fs-title">Step 3</h2> -->
+                                 
+                                <div class="input-box">
+                                    <label for="email"><strong>Email</strong></label>
+                                    <input type="text" id="email" name="email" placeholder="" required require>
+                                </div>
+                                <div class="input-box">
+                                    <label for="pnumber"><strong>Phone Number</strong></label>
+                                    <input type="text" id="pnumber" name="pnumber" placeholder="" required>
+                                </div>
+                                </div>
+                                <div class="input-box">
+                                    <label for="text"><strong>Do You Need Advisory in Project Funding to help you choose right bank and product for you with competitive pricing? Yes/No</strong></label>
+                                    <input type="text" id="text" name="advisory_needed" placeholder="" required>
+                                </div>
+                                    
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                    <input type="button" id="confirmButton" name="confirm" class="next action-button" value="Confirm"/>
+                                    <!-- <button type="button" id="confirmButton">Confirm and Submit</button> -->
+                                </fieldset>
+                                <!-- <fieldset>
+                                    <div class="form-ca">
+                                        <br><center><h2>Success!</h2></center>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3 text-center">
+                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="success-image fit-image">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-8 text-center">
+                                                <h5>You Have Successfully Submitted All Details!</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset> -->
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="message">
+        <?php if (!empty($message)) echo $message; ?>
+    </div>
+
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script>
+        document.getElementById('confirmButton').addEventListener('click', function() {
+            if (confirm("Are you sure you want to submit the form?")) {
+                document.getElementById('msform').submit();
+            }
+        });
+    </script>
+    <script>
+   $(document).ready(function(){
+    
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var opacity;
+    
+    $(".next").click(function(){
+        
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+        
+        //Add Class Active
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+        
+        //show the next fieldset
+        next_fs.show(); 
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now) {
+                // for making fielset appear animation
+                opacity = 1 - now;
+    
+                current_fs.css({
+                    'display': 'none',
+                    'position': 'relative'
+                });
+                next_fs.css({'opacity': opacity});
+            }, 
+            duration: 600
+        });
+    });
+    
+    $(".previous").click(function(){
+        
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+        
+        //Remove class active
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+        
+        //show the previous fieldset
+        previous_fs.show();
+    
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now) {
+                // for making fielset appear animation
+                opacity = 1 - now;
+    
+                current_fs.css({
+                    'display': 'none',
+                    'position': 'relative'
+                });
+                previous_fs.css({'opacity': opacity});
+            }, 
+            duration: 600
+        });
+    });
+    
+    $('.radio-group .radio').click(function(){
+        $(this).parent().find('.radio').removeClass('selected');
+        $(this).addClass('selected');
+    });
+    
+    $(".submit").click(function(){
+        return false;
+    })
+        
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('.js-example-basic-single').select2({
+        placeholder: 'Select an option', // Placeholder text
+        allowClear: true, // Option to clear selection
+        width: 'resolve', // Adjust width automatically based on content
+        dropdownAutoWidth: true // Auto-adjust width based on content
+    });
+});
+</script>
+<footer>
+        <p>&copy; 2024 Rk Advisory. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>

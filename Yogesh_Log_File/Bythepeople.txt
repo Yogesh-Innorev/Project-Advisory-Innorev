@@ -1,0 +1,47 @@
+Work Order :- 
+Allotment Date:- 16-02-2024.
+Completion Date:- 16-02-2024.
+	1. Post Authentication. user need to be register themselves before posting any post.
+		1.1 - File source:- application/controller/post.php  Line No: 56 - 59
+    
+    2. alert message when unregistered user try to make post and comment.
+    	2.1 File source:- application/view/layout.php  Line No: 648 - 650
+
+    3. Resolved all the errors that was occuring on feed page, trending page and people page.
+    	3.1 file source:- application/view/index.php
+
+    4. some options need to be added on profession field on profile component.
+    	4.1 file source:- application/view/layout.php  Line No:- 207 - 216
+
+    5. Gender field need to be align more to right.
+    	5.1 file source:- application/view/layout.php Line No:- 159 Only styling(margin-left: 8px)
+
+    6. Post Section will be fixed on scroll.
+    	6.1 file source:- application/view/index.php  Line No:- 43 and 50-51 styling only
+
+    7. Display message on edit profile page when user is unregistered.
+
+    8. Creating admin panel.
+
+    9. IN Footer add about us, privacy & policy and terms & conditions page.
+        9.1 File source:- layout.php  Line No:- 77 to 83
+        9.2 added class:- manage-page and styling at top of tag  LINE N0:- 27 -42
+        9.3 Created routes controller and view as manage_pages
+        9.4 created admin table in database.
+        9.5 created about_us, privacy_policy, contact_us and terms_condition table in database.
+
+    10. contact_us_form.css  file in assets/css/
+    11. manage_feed.css  assets/admin/css/manage_feed.css
+    12. table css, js, image  assets/admin/assets/table/style.css
+
+20/05/2024
+
+1. logo size needs to be larger.  file source:- layout.php   line no:- 213- 218
+
+22/05/2024
+1. Add fields in profession section in profile.
+        1.1 file source:- view/index.php
+        1.2 Line No:- 355 - 390
+
+        2.1 file source:- view/layout.php
+        2.2 line no:- 448 - 488  AND 1779 - 1795
