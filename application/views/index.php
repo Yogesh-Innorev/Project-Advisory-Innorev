@@ -69,8 +69,8 @@
                             <div class="col-lg-7 animated fadeInLeft">
                                 <div class="text-sm-center text-md-start">
                                     
-                                    <h1 class="display-1 text-white mb-4">Life Insurance Makes You Happy</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
+                                    <h1 class="display-1 text-white mb-4">Empowering Projects, Streamlining Success</h1>
+                                    <p class="mb-5 fs-5" style="font-style: italic;">"Expert guidance in project engineering, funding, and business growth. Your partner in navigating the complexities of project execution."
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
                                         <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i> Watch Video</a>
@@ -333,7 +333,7 @@
             </div>
         </div>
         <!-- Feature End -->
-        
+
         <!-- Blog Start -->
         <div class="container-fluid blog py-5">
             <div class="container py-5">
