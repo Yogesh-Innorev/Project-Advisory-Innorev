@@ -39,296 +39,44 @@
 
     <!-- Template Stylesheet -->
     <link href="<?php echo base_url() ?>assets/index/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/index/css/template.css" rel="stylesheet">
 
     <style>
-      /*custom font*/
-      body {
-          font-family: "Open Sans", sans-serif;
-          background-color: #015fc9 !important;
-      }
-      #signUpForm {
-          max-width: 1160px;
-          background-color: #ffffff;
-          margin: 40px auto;
-          padding: 20px;
-          box-shadow: 0px 6px 18px rgb(0 0 0 / 9%);
-          border-radius: 12px;
-      }
-      #signUpForm .form-header {
-          gap: 5px;
-          text-align: center;
-          font-size: 0.9em;
-      }
-      #signUpForm .form-header .stepIndicator {
-          position: relative;
-          flex: 1;
-          padding-bottom: 30px;
-      }
-      #signUpForm .form-header .stepIndicator.active {
-          font-weight: 600;
-      }
-      #signUpForm .form-header .stepIndicator.finish {
-          font-weight: 600;
-          color: #0468BF;
-      }
-      #signUpForm .form-header .stepIndicator::before {
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          transform: translateX(-50%);
-          z-index: 9;
-          width: 20px;
-          height: 20px;
-          background-color: #d5efed;
-          border-radius: 50%;
-          border: 3px solid #ecf5f4;
-      }
-      #signUpForm .form-header .stepIndicator.active::before {
-          background-color: #0468BF;
-          border: 1px solid #d5f9f6;
-      }
-      #signUpForm .form-header .stepIndicator.finish::before {
-          background-color: #8b97db;
-          border: 1px solid #b7e1dd;
-      }
-      #signUpForm .form-header .stepIndicator::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: 8px;
-          width: 100%;
-          height: 3px;
-          background-color: #f3f3f3;
-      }
-      #signUpForm .form-header .stepIndicator.active::after {
-          background-color: #0468BF;
-      }
-      #signUpForm .form-header .stepIndicator.finish::after {
-          background-color: #8b97db;
-      }
-      #signUpForm .form-header .stepIndicator:last-child:after {
-          display: none;
-      }
-      #signUpForm input {
-        padding: 9px 10px;
-          width: 100%;
-          font-size: 1em;
-/*          border: 1px solid #e3e3e3;*/
-          border-radius: 5px;
-          margin-bottom: 10px;
-      }
-      #signUpForm input:focus {
-          border: 1px solid #009688;
-          outline: 0;
-      }
-      #signUpForm input.invalid {
-          border: 1px solid #ffaba5;
-      }
-      #signUpForm select:focus {
-          border: 1px solid #009688;
-          outline: 0;
-      }
-      #signUpForm select.invalid {
-          border: 1px solid #ffaba5;
-      }
-      #signUpForm .step {
-          display: none;
-      }
-      #signUpForm .form-footer {
-          overflow: auto;
-          gap: 20px;
-      }
-      #signUpForm .form-footer button {
-          background-color: #0468BF;
-          border: 1px solid #0468BF !important;
-          color: #ffffff;
-          border: none;
-          padding: 3px 30px;
-          font-size: 1em;
-          cursor: pointer;
-          border-radius: 5px;
-/*          flex: 1;*/
-/*          width: 200px;*/
-          display: block;
-          margin: 5px auto;
-      }
-      #signUpForm .form-footer button:hover {
-          opacity: 0.8;
-      }
-      #signUpForm .form-footer #prevBtn {
-          background-color: #0468BF;
-    border: 1px solid #0468BF !important;
-    color: #ffffff;
-    border: none;
-    padding: 3px 30px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    /* flex: 1; */
-    /* width: 200px; */
-    display: block;
-    margin: 5px auto;
-      }
-
-       #sector {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-            margin-bottom: 15px;
-            font-size: 16px;
-            color: #2C3E50;
-            background-color: #fff;
-            box-sizing: border-box;
-        }
-
-        h1{
-            color: darkblue;
-            /* background-color:darkblue; */
-            font-size: 40px;
-            /* display: inline; */
-            /* text-shadow: 2px 2px; */
-
-        }
-        h3{
-            color: blue;
-            font-size:12px;
-            /* background-color:blue; */
-        }
-        .input-row {
+      
+      .background-container {
+            width: 100%; /* Full viewport width */
+            height: 40vh; /* Full viewport height */
+            background-image: url('<?php echo base_url('assets/img/login.jpg') ?>'); 
+            background-size: cover; 
+            background-position: center; 
             display: flex;
-            justify-content: space-between; /* Adjust alignment as needed */
-            margin-bottom: 15px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white; /* White text for contrast */
+            text-align: center;
+            font-family: 'Arial', sans-serif;
         }
 
-        .input-box {
-            flex: 1; /* This will make each input-box take up equal space */
-            margin-right: 10px; /* Adjust spacing between columns */
+        /* Style for the quote text */
+        .quote {
+            font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background for readability */
+            padding: 20px;
+            border-radius: 10px;
         }
-
-        .input-box label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .input-box input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .input-box input[type="text"]:focus {
-            border: 2px solid skyblue;
-            outline: none;
-        }
-        fieldset {
-            border: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .form-card {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .input-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .input-box {
-            flex: 1;
-            margin-bottom: 15px; /* Adjust spacing between input boxes */
-        }
-
-        .input-box label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .input-box select,
-        .input-box input[type="text"] {
-            width: calc(100% - 20px); /* Adjust input width with margin */
-            padding: 8px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .input-box select:focus,
-        .input-box input[type="text"]:focus {
-            border: 2px solid skyblue;
-            outline: none;
-        }
-
-        .action-button-previous,
-        .action-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
-
-        .action-button-previous:hover,
-        .action-button:hover {
-            background-color: #0056b3;
-        }
-        .card {
-            background-color: white; /* Background color for the card */
-            padding: 20px; /* Adjust padding as needed */
-            margin: 20px auto; /* Adjust margin as needed */
-            width: 90%; /* Adjust width as needed */
-            max-width: 900px; /* Maximum width if necessary */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for depth */
-            height: auto; /* Adjust height as needed */
-            padding: 10px; /* Adjust padding as needed */
-            margin: 10px auto; /* Adjust margin as needed */
-            width: 80%; /* Adjust the width as needed */
-            /* max-width: 600px; Set a maximum width if needed   */
-            /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); Reduce shadow size  */
-        }
-
-        .container-fluid {
-            /* padding: 0 20px; Adjust padding as needed */
-        }
-       
-        .social-media a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
-
-        .social-media a:hover {
-            color: #007BFF;
-        }
-        label {
-            display: inline-block;
-            margin-bottom: 7px;
-        }
-
-
     </style>
 </head>
 <body>
+    <div class="background-container">
+        <div class="quote wow fadeInDown" data-wow-delay="0.2s">
+            "A good financial plan is a road map that shows us exactly how the choices we make today will affect our future." – Alexa Von Tobel
+        </div>
+    </div>
     <!-- MultiStep Form -->
-    <h1 class="text-center fs-4" style="margin-top: 10px;color: #fff;">Project Funding (Dasboard)</h1>
+    <!-- <h1 class="text-center fs-4" style="margin-top: 10px;color: #fff;">Project Funding (Dasboard)</h1> -->
     <form id="signUpForm" action="<?php echo base_url('admin/header/save_form'); ?>" method="POST" autocomplete="off">
-          <div class="form-header d-flex mb-4"> 
+          <div class="form-header d-flex mb-4 wow fadeInRight" data-wow-delay="0.2s"> 
             <span class="stepIndicator">Basic Details</span> 
             <span class="stepIndicator">Funding Details</span> 
             <span class="stepIndicator">Communication Details</span> 
@@ -336,8 +84,8 @@
           <!-- end step indicators --> 
           <!-- step one -->
           <div class="step">
-            <p class="text-center mb-4">Give us some information to get you started on the bank's dashboard</p>
-            <div class="row">
+            <p class="text-center mb-4 wow fadeInUp" data-wow-delay="0.3s">Give us some information to get you started on the bank's dashboard</p>
+            <div class="row wow fadeInLeft" data-wow-delay="0.4s">
               <div class="col-3">
                 <label for="sector"><strong>Name</strong></label> 
                 <input type="text" class="form-control" name="name" placeholder="Full name"  required>
@@ -410,60 +158,170 @@
                 <label for="estimatedTurnover"><strong>Phone Number</strong></label>
                 <input type="text" placeholder="Phone Number"  name="pnumber" required> 
               </div>
-            </div>
-            <div class="row">
-              
-            </div>
-            <!-- <div class="col-lg-12" style="margin-top:10px">
-                <label for="estimatedTurnover"><strong>Do You Need Advisory in Project Funding to help you choose right bank and product for you with competitive pricing?</strong></label>
-                <div class="d-flex align-items-center px-0 checkbox-input">
-                    <div class="form-check">
-                        <label class="form-check-label" for="profile_req_gender_male">Yes</label>
-                        <input class="form-check-input" type="radio" name="advisory_needed" id="yes" value="Yes" checked style="width:20px;border-radius: 50%;">
-                    </div>
-                    <div class="form-check" style="margin-left: 24px;">
-                        <input class="form-check-input" type="radio" name="advisory_needed" id="no" value="No" style="width:20px;border-radius: 50%;">
-                        <label class="form-check-label" for="profile_req_gender_female">No</label>
-                    </div>
-                </div>
-            </div> -->            
+            </div>           
           </div> <!-- start previous / next buttons -->
           <br>
-          <div class="form-footer d-flex"> 
+          <div class="form-footer d-flex wow fadeInUp" data-wow-delay="0.6s"> 
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
             <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> 
           </div> <!-- end previous / next buttons -->
     </form>
-<!-- /.MultiStep Form -->
+    <!-- /.MultiStep Form -->
 
-<!-- Modal -->
-<div class="modal fade" id="advisoryModal" tabindex="-1" role="dialog" aria-labelledby="advisoryModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="advisoryModalLabel">Advisory Needed</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Do you need advisory in project funding to help you choose the right bank and product for you with competitive pricing?</p>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="advisory_needed_modal" id="modalYes" value="Yes" checked>
-          <label class="form-check-label" for="modalYes">Yes</label>
+    <!-- Modal -->
+    <div class="modal fade" id="advisoryModal" tabindex="-1" role="dialog" aria-labelledby="advisoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="advisoryModalLabel">Advisory Needed</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Do you need advisory in project funding to help you choose the right bank and product for you with competitive pricing?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="advisory_needed_modal" id="modalYes" value="Yes" checked>
+              <label class="form-check-label" for="modalYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="advisory_needed_modal" id="modalNo" value="No">
+              <label class="form-check-label" for="modalNo">No</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="submitFormWithModal()">Submit</button>
+          </div>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="advisory_needed_modal" id="modalNo" value="No">
-          <label class="form-check-label" for="modalNo">No</label>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="submitFormWithModal()">Submit</button>
       </div>
     </div>
-  </div>
-</div>
+
+    <!-- product section -->
+    <div class="prodcut_section">
+        <div class="cards-container">
+            <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon"><img src="icons/personal-loan-icon.png" alt="Personal Loan"></div>
+                <h3>Personal Loan</h3>
+                <p>Quick and easy finances at competitive interest rates.</p>
+                <div class="btns">
+                    <a href="#" class="apply-btn">Apply Now <i class="bi bi-chevron-right"></i></a>
+                    <a href="#" class="learn-btn">Learn More <i class="bi bi-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card wow fadeInUp" data-wow-delay="0.4s">
+                <div class="icon"><img src="icons/pre-approved-icon.png" alt="Pre Approved Offers"></div>
+                <h3>Pre Approved Offers</h3>
+                <p>Explore special pre-approved offers.</p>
+                <div class="btns">
+                    <a href="#" class="apply-btn">Apply Now <i class="bi bi-chevron-right"></i></a>
+                    <a href="#" class="learn-btn">Learn More <i class="bi bi-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card wow fadeInUp" data-wow-delay="0.6s">
+                <div class="icon"><img src="icons/used-car-loan-icon.png" alt="Used Car Loan"></div>
+                <h3>Used Car Loan</h3>
+                <p>Get up to 95% of your car value and book your dream car.</p>
+                <div class="btns">
+                    <a href="#" class="apply-btn">Apply Now <i class="bi bi-chevron-right"></i></a>
+                    <a href="#" class="learn-btn">Learn More <i class="bi bi-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- happy customers Start -->
+        <div class="container-fluid bg-light about pb-5">
+            <div class="container pb-5">
+              <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Happy Clients</h4>
+                    <h1 class="display-4 mb-4">We Provide Best Services</h1>
+                    <p class="mb-0">We are committed to guiding businesses through the complexities of project planning, funding, and approvals. With years of experience in engineering, financial analysis, and government incentives.
+                    </p>
+                </div>
+                <div class="row g-5">
+                    <div class="col-xl-12 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="bg-white rounded p-5 h-100" style="background-color: #221f1f !important;">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-sm-3">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">Insurance Policies</h4>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">Awards WON</h4>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">Skilled Agents</h4>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">Team Members</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- happy customers End -->
+    <div class="background wow fadeInUp" data-wow-delay="0.2s">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-body">
+            <div class="screen-body-item left wow fadeInLeft" data-wow-delay="0.6s">
+              <div class="app-title">
+                <h1 class="display-1 text-white mb-4">Empowering Projects, Streamlining Success.</h1>
+                <p class="mb-5 fs-5" style="font-style: italic;">Opt our consultancy services, we are the best as customers says.</p>
+              </div>
+            </div>
+            <div class="screen-body-item wow fadeInRight" data-wow-delay="0.6s">
+              <div class="app-form">
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="NAME">
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="EMAIL">
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="CONTACT NO">
+                </div>
+                <div class="app-form-group message">
+                  <input class="app-form-control" placeholder="MESSAGE">
+                </div>
+                <div class="app-form-group buttons">
+                  <button class="app-form-button">CANCEL</button>
+                  <button class="app-form-button">SEND</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 

@@ -33,7 +33,7 @@
         margin: 0,
         stagePadding: 0,
         autoplay: true,
-        smartSpeed: 500,
+        smartSpeed: 2000,
         dots: true,
         loop: true,
         nav : true,

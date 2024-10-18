@@ -119,6 +119,9 @@
     justify-content: center;
     transition: 0.5s;
 }
+.owl-nav{
+    display: none;
+}
 
 .header-carousel .owl-nav .owl-prev {
     bottom: 30px;

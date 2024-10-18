@@ -49,8 +49,65 @@
     #main_heading{
         text-align: center !important;
         position: relative;
-        top: -37px;
+        top: -107px;
         font-size: 35px;
+    }
+    #heading_2{
+        position: relative;
+        top: -60px;
+    }
+    .fixed-query-form {
+        position: absolute; /* Fix the position of the form */
+        top: 20%;
+        left: 0;
+        width: 100%; /* Ensure it takes full width */
+        height: 100%; /* Ensure it covers the carousel height */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Center the form vertically and horizontally */
+        z-index: 1; /* Make sure it is on top of the carousel */
+    }
+    @media (max-width: 768px) {
+        .fixed-query-form {
+            top: 88%;
+        }
+        #main_heading{
+            position: absolute;
+            top: 29px;
+        }
+        #heading_2{
+            position: relative;
+            top: -239px;
+        }
+        h1.display-1 {
+            text-align: center;
+            font-size: 1.5rem; /* Further reduce heading size */
+        }
+        .ticket-form {
+            max-height: 500px;
+            width: 100% !important;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .fixed-query-form {
+            top: 88%;
+        }
+        #main_heading{
+            position: absolute;
+            top: 29px;
+        }
+        #heading_2{
+            position: relative;
+            top: -170px;
+        }
+        h1.display-1 {
+            font-size: 1.5rem; /* Further reduce heading size */
+        }
+        .ticket-form {
+            max-height: 500px;
+            width: 100% !important;
+        }
     }
     </style>
 </head>
@@ -61,14 +118,13 @@
     <?php  echo $this->session->flashdata('message');  ?>
 </div>
         <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item bg-primary">
+            <div class="header-carousel-item bg-primary" style="background-image:url('<?php echo base_url('assets/index/img/About.png') ?>');">
                 <div class="carousel-caption">
                     <div class="container">
                     <h4 class="text-white text-uppercase fw-bold mb-4" id="main_heading">Welcome To R.K Advisory</h4>
                         <div class="row g-4 align-items-center">
                             <div class="col-lg-7 animated fadeInLeft">
-                                <div class="text-sm-center text-md-start">
-                                    
+                                <div class="text-sm-center text-md-start" id="heading_2"> 
                                     <h1 class="display-1 text-white mb-4">Empowering Projects, Streamlining Success</h1>
                                     <p class="mb-5 fs-5" style="font-style: italic;">"Expert guidance in project engineering, funding, and business growth. Your partner in navigating the complexities of project execution."
                                     </p>
@@ -78,46 +134,49 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 animated fadeInRight">
-                                <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
-                                    <div class="ticket-form p-5">
-                                        
-                                        <h2 class="text-dark text-uppercase mb-4" style="color:#fff !important;">Send your Query</h2>
-                                        <form id="query_form" action="<?php echo base_url('welcome/save_enquiry'); ?>" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-                                            <div class="row g-4">
-                                                <div class="col-12">
-                                                    <input type="text" class="form-control border-0 py-2" id="name" name="name" placeholder="Your Name" required>
-                                                </div>
-                                                <div class="col-12 col-xl-6">
-                                                    <input type="email" class="form-control border-0 py-2" id="email" name="email" placeholder="Your Email" required>
-                                                </div>
-                                                <div class="col-12 col-xl-6">
-                                                    <input type="phone" class="form-control border-0 py-2" id="phone" name="phone" placeholder="Phone" required>
-                                                </div>
-                                                <div class="col-12">
-                                                    <select class="form-select border-0 py-2" name="service" aria-label="Default select example" required>
-                                                        <option value="">Select Our Service</option>
-                                                        <option >Project Engineering Advisory</option>
-                                                        <option >Project Techno-Financial due diligence</option>
-                                                        <option >Project Funding (Dasboard)</option>
-                                                        <option >Govt. Incentives</option>
-                                                        <option >Ease-of-doing business</option>
-                                                        <option >Project Approvals</option>
-                                                        <option >Project Application flow</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button type="submit" id="query_form_submit" class="btn btn-primary w-100 py-2 px-5">Send Now</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>  
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="header-carousel-item bg-primary" style="background-image:url('<?php echo base_url('assets/index/img/Home.png') ?>');">
+                
+            </div>
+        </div>
+        <div class="col-lg-5 animated fadeInRight fixed-query-form">
+            <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                <div class="ticket-form p-5">
+                    
+                    <h2 class="text-dark text-uppercase mb-4" style="color:#fff !important; text-align: center;">Send your Query</h2>
+                    <form id="query_form" action="<?php echo base_url('welcome/save_enquiry'); ?>" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <input type="text" class="form-control border-0 py-2" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <input type="email" class="form-control border-0 py-2" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <input type="phone" class="form-control border-0 py-2" id="phone" name="phone" placeholder="Phone" required>
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select border-0 py-2" name="service" aria-label="Default select example" required>
+                                    <option value="">Select Our Service</option>
+                                    <option >Project Engineering Advisory</option>
+                                    <option >Project Techno-Financial due diligence</option>
+                                    <option >Project Funding (Dasboard)</option>
+                                    <option >Govt. Incentives</option>
+                                    <option >Ease-of-doing business</option>
+                                    <option >Project Approvals</option>
+                                    <option >Project Application flow</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" id="query_form_submit" class="btn btn-primary w-100 py-2 px-5">Send Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>  
         </div>
         <!-- Carousel End -->
         <!-- About Start -->
